@@ -39,9 +39,6 @@ adapters/checkpoints:
 | 7 | PPO with your RM eval | no code — writeup in `submissions/task7_ppo_rm_eval.txt` | 5 |
 | 8 | Custom reward design + analysis | `tasks/task8_custom_reward.py::reward_score` + `submissions/task8_writeup.md` | 15 |
 
-Anything else you write — helper functions, extra scripts, additional
-eval — is yours; not graded.
-
 ## Environment
 
 You need:
@@ -49,11 +46,6 @@ You need:
 - A Linux VM with one H100 (or comparable) and **docker** installed.
 - The `nvidia-container-toolkit` so docker sees the GPU. Verify with
   `sudo docker run --rm --gpus all nvidia/cuda:12.4.0-base-ubuntu22.04 nvidia-smi`.
-- ≥ 200 GB disk (the verl docker image alone is ~25 GB; the HF cache
-  for Qwen-0.5B is another ~3 GB).
-- Python 3.10+ on the host for the SFT / DPO / RM training steps. The
-  PPO step runs inside the verl container; you don't need a host
-  Python for it.
 
 Clone the repo on the VM:
 
